@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ECommerceWebAppAngular"
+    }
+  },
+  "defaultProject": "ECommerceWebAppAngular",
+  "cli": {
+    "analytics": "5ca7601a-0a1a-4628-8346-e824c43dafa6"
+  }
 }
