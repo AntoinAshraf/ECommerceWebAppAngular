@@ -12,9 +12,9 @@
                 </button>
                 <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                     <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
-                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="">Home</a></li>
                         <li class="nav-item submenu dropdown">
-                            <a href="category.html" class="nav-link dropdown-toggle" role="button" aria-haspopup="true"
+                            <a routerLink="categ" routerLinkActive="active" class="nav-link dropdown-toggle" role="button" aria-haspopup="true"
                                 aria-expanded="false">Shop</a>
                             <!--data-toggle="dropdown"-->
                             <!-- <ul class="dropdown-menu">
@@ -36,11 +36,9 @@
                     </ul>
 
                     <ul class="nav-shop">
-                        <input class="mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <li class="nav-item"><button><i class="ti-search"></i></button></li>
                         <li class="nav-item"><button><i class="ti-shopping-cart"></i><span
                                     class="nav-shop__circle">3</span></button> </li>
-                        <li class="nav-item"><a class="button button-header" href="login.html">Login</a></li>
+                        <li class="nav-item"><a class="button button-header" outerLinkActive="active" routerLink="login">Buy Now</a></li>
                     </ul>
                 </div>
             </div>
@@ -50,7 +48,9 @@
 <!--================ End Header Menu Area =================-->
 
 <main class="site-main">
-    <app-products-container></app-products-container>
+    <router-outlet>
+
+    </router-outlet>
 </main>
 
 <!--================ Start footer Area  =================-->
