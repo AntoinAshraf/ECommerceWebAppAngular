@@ -8,7 +8,7 @@ import { Category } from '../../core/models/category';
 export class CategoriesService {
 
   constructor( private myClient:HttpClient ) {  }
-  baseURL = "http://localhost:5105";
+  baseURL = "http://localhost:51050";
 
   GetAllCategories(){
     return this.myClient.get(`${this.baseURL}/api/categories`);

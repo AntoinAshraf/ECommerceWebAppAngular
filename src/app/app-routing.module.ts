@@ -6,14 +6,20 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { ErrorComponent } from './components/error/error.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { CartComponent } from './components/cart/cart.component';
+import { SubmitCartToOrderComponent } from './components/submit-cart-to-order/submit-cart-to-order.component';
+import { AboutComponent } from './components/about/about.component';
 
 const routes: Routes = [
   { path: '', redirectTo:'home',pathMatch:'full' },
-  { path: 'login', component: LoginComponent },
-  { path: 'login/register', component: RegisterComponent },
-  { path: 'home', component:ProductsContainerComponent },
+  { path: 'login', component: LoginComponent, pathMatch: 'prefix' },
+  { path: 'register', component: RegisterComponent, pathMatch: 'prefix' },
+  { path: 'home', component:ProductsContainerComponent, pathMatch: 'prefix' },
   { path: 'categ', component: CategoriesComponent },
-  { path:'**', component: ErrorComponent }
+  { path: 'checkout', component: SubmitCartToOrderComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'cart', component: CartComponent },
+  { path: '**', component: ErrorComponent }
 ];
 
 @NgModule({

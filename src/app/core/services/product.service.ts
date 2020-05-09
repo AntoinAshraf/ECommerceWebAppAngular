@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class ProductsService {
 
   constructor(private myClient:HttpClient) { }
-  baseURL = "http://localhost:5105";
+  baseURL = "http://localhost:51050";
 
   GetProdsWithPromotions(){
     return this.myClient.get(`${this.baseURL}/api/ProductsWithPromotions`);

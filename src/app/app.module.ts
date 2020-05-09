@@ -13,6 +13,12 @@ import { CategoriesService } from './core/services/categories.service';
 import { ErrorComponent } from './components/error/error.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { CartComponent } from './components/cart/cart.component';
+import { CartTableRowComponent } from './components/cart-table-row/cart-table-row.component';
+import { SubmitCartToOrderComponent } from './components/submit-cart-to-order/submit-cart-to-order.component';
+import { SubmitOrderItemTableComponent } from './components/submit-order-item-table/submit-order-item-table.component';
+import { AboutComponent } from './components/about/about.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +28,12 @@ import { RegisterComponent } from './components/register/register.component';
     CategoriesComponent,
     ErrorComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CartComponent,
+    CartTableRowComponent,
+    SubmitCartToOrderComponent,
+    SubmitOrderItemTableComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

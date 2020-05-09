@@ -21,7 +21,7 @@ export class CategoriesComponent implements OnInit {
 
   ngOnDestroy(): void{
     this.catifSubcriber.unsubscribe();
-    this.prodSubscriber.unsubscribe();
+    //this.prodSubscriber.unsubscribe();
   }
 
   ngOnInit(): void {

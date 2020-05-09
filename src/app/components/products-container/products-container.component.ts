@@ -12,7 +12,7 @@ export class ProductsContainerComponent implements OnInit {
   subcriber;
   products;
   ngOnDestroy(): void{
-    this.subcriber.unsubscribe()
+    //this.subcriber.unsubscribe()
   }
 
   ngOnInit(): void {
