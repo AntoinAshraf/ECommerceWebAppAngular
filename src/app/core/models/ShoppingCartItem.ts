@@ -1,9 +1,9 @@
 import {product} from './product';
 
 export class ShoppingCartItem{
-    ShoppingCartItemId:number;
-    ProductId:number;
+    shoppingCartItemId:string;
+    productId:string;
     product:product;
-    Amount:number;
-    ShoppingCartId:number;
+    amount:number;
+    shoppingCartId:string;
 }

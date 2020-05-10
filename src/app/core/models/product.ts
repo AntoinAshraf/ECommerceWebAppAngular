@@ -6,9 +6,8 @@ export class product{
     shortDescription:string;
     longDescription:string;
     price:number;
-    imageUrl:string; // check datatype
-    imageThumbnailUrl:string; // check datatype
+    imageUrl:string; 
+    imageThumbnailUrl:string; 
     isDiscountedProduct:boolean;
-    categoryId:number; 
-    category:Category;
+    categoryId:string;
 }

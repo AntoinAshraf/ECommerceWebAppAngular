@@ -2,12 +2,12 @@ import { Order } from './order';
 import { product } from './product';
 
 export class OrderDetails{
-    OrderDetailId:number;
-    OrderId:number;
+    orderDetailId:string;
+    orderId:string;
     order:Order;
-    ProductId:number;
-    Product:product;
-    Amount:number;
-    Price:number;
-    ProductName:string;
+    productId:string;
+    product:product;
+    amount:number;
+    price:number;
+    productName:string;
 }
