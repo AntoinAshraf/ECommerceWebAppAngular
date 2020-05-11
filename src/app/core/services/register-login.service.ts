@@ -7,9 +7,15 @@ import { HttpClient } from '@angular/common/http';
 export class RegisterLoginService {
 
   private _registerUrl = "http://localhost:51050/api/auth/Register";
-  constructor( private httpclint:HttpClient ) {  }
+  private _loginUrl = "http://localhost:51050/api/auth/Login";
+  
+  constructor( private httpClient:HttpClient ) {  }
 
   registerUser(user){
-    return this.httpclint.post<any>(this._registerUrl, user);
+    return this.httpClient.post<any>(this._registerUrl, user);
+  }
+
+  loginUser(user){
+    return this.httpClient.post<any>(this._loginUrl, user);
   }
 }

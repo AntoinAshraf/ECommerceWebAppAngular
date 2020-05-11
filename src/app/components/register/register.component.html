@@ -43,13 +43,23 @@
                             <input [(ngModel)]="userRegisterData.confirmPassword" type="text" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm Password'">
                         </div>
                         <div class="col-md-12 form-group">
+                            <input [(ngModel)]="userRegisterData.fName" type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'">
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <input [(ngModel)]="userRegisterData.lName" type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'">
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <input [(ngModel)]="userRegisterData.gender" type="text" class="form-control" id="gender" name="gender" placeholder="Gender" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Gender'">
+                        </div>
+                        <div class="col-md-12 form-group">
                             <div class="creat_account">
                                 <input type="checkbox" id="f-option2" name="selector">
                                 <label for="f-option2">Keep me logged in</label>
                             </div>
                         </div>
                         <div class="col-md-12 form-group">
-                            <button type="submit" value="submit" class="button button-register w-100">Register</button>
+                            <!-- <button type="submit" value="submit" class="button button-register w-100">Register</button> -->
+                            <button (click)="registerUser()" type="button" class="button button-register w-100">Register</button>
                         </div>
                     </form>
                 </div>

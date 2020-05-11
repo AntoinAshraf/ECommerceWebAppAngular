@@ -34,10 +34,10 @@
                     <h3>Log in to enter</h3>
                     <form class="row login_form" action="#/" id="contactForm" >
                         <div class="col-md-12 form-group">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
+                            <input [(ngModel)]="loginUserData.email" type="text" class="form-control" id="name" name="name" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
                         </div>
                         <div class="col-md-12 form-group">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+                            <input [(ngModel)]="loginUserData.password" type="text" class="form-control" id="name" name="name" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
                         </div>
                         <div class="col-md-12 form-group">
                             <div class="creat_account">
@@ -46,7 +46,7 @@
                             </div>
                         </div>
                         <div class="col-md-12 form-group">
-                            <button type="submit" value="submit" class="button button-login w-100">Log In</button>
+                            <button (click)="loginUser()" type="button" class="button button-login w-100">Log In</button>
                         </div>
                     </form>
                 </div>
