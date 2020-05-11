@@ -1,5 +1,5 @@
 export class ApplicationUser{
-    ApplicationUserId:string;
+    applicationUserId:string;
     email:string;
     password:string;
     confirmPassword:string;

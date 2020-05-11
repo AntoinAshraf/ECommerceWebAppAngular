@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy} from '@angular/core';
 import { ProductsService } from '../../core/services/product.service';
+import { UserLoginData } from '../../core/models/userAuthKey';
 
 @Component({
   selector: 'app-products-container',

@@ -35,14 +35,14 @@
                         <li class="nav-item"><a [routerLink]="'/about'" class="nav-link" >Contact</a></li>
                     </ul>
 
-                    <ul class="nav-shop">
-                        <li class="nav-item">
+                    <ul  class="nav-shop">
+                        <li *ngIf="userKey" class="nav-item">
                             <button [routerLink]="'/cart'">
                                 <i class="ti-shopping-cart"></i>
-                                <span class="nav-shop__circle">3</span>
                             </button>
                         </li>
-                        <li class="nav-item"><a class="button button-header" outerLinkActive="active" [routerLink]="'/login'">Buy Now</a></li>
+                        <li *ngIf="!userKey" class="nav-item"><a class="button button-header" outerLinkActive="active" [routerLink]="'/login'">Buy Now</a></li>
+                        <li *ngIf="userKey" class="nav-item"><a class="button button-header" (click)="onLogoutClick()" >Logout</a></li>
                     </ul>
                 </div>
             </div>

@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {Router} from "@angular/router";
+import { UserLoginData } from '../../core/models/userAuthKey';
+import { CartItemService } from '../../core/services/cart-item.service';
 
 @Component({
   selector: 'app-product-cart-item',
@@ -7,7 +10,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProductCartItemComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router, private cartItems:CartItemService ) { }
+
+  onCartClick(){
+    if( UserLoginData.getUserSetting() ){
+
+      console.log( this.cartItems.GetShoppingCartItems(UserLoginData.getUserSetting()) );
+
+    }else{
+      this.router.navigate(['/home']);
+    }
+  }
 
   ngOnInit(): void {
   }
