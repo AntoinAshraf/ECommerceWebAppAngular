@@ -22,7 +22,7 @@ import { SubmitOrderItemTableComponent } from './components/submit-order-item-ta
 import { AboutComponent } from './components/about/about.component';
 
 // Token service
-import {TokenInterceptorService, authInterceptorProviders} from './core/services/token-interceptor.service'
+import {TokenInterceptorService} from './core/services/token-interceptor.service'
 
 // import {JwtModule, JWT_OPTIONS} from '@auth0/angular-jwt';
 // import {UserLoginData} from './core/models/userAuthKey';
@@ -72,7 +72,11 @@ import {TokenInterceptorService, authInterceptorProviders} from './core/services
     CategoriesService,
     ProductsService,
     // UserLoginData
-    authInterceptorProviders
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
