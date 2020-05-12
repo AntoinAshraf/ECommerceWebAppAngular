@@ -12,7 +12,28 @@ export class OrdersService {
   //get userOrders
   getOrders()
   {
-    let response = this.myClient.get(`${this.apiUrl}/UserOrder`,{observe:'body'});
+    let response = this.myClient.get(`${this.apiUrl}/orders/UserOrder`,{observe:'body'});
+    return response;
+  }
+
+  //get userPendingOrders
+  getPendingOrders()
+  {
+    let response = this.myClient.get(`${this.apiUrl}/orders/UserPendingOrders`,{observe:'body'});
+    return response;
+  }
+
+  //get userNotPendingOrders
+  getNotPendingOrders()
+  {
+    let response = this.myClient.get(`${this.apiUrl}/orders/UserNotPendingOrders`,{observe:'body'});
+    return response;
+  }
+
+  //delete user Order
+  deleteOrder(id)
+  {
+    let response = this.myClient.delete(`${this.apiUrl}/orders/${id}`);
     return response;
   }
 }

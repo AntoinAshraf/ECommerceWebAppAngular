@@ -12,17 +12,35 @@ export class ProfileComponent implements OnInit {
   constructor(private myService:OrdersService,private myService2:UserService) { }
 
   subscriber;
-  orders;
+  pendingOrders;
+  notPendingOrders;
+  subscriber3;
   subscriber2;
   data;
   ngOnInit(): void {
-    //debugger;
-    this.subscriber = this.myService.getOrders()
-    .subscribe((orders)=>{
-      console.log(orders);
-      if(orders)
+
+    //user pending orders
+    debugger;
+    this.subscriber = this.myService.getPendingOrders()
+    .subscribe((pendingOrders)=>{
+      console.log("pendingOrders");
+      if(pendingOrders)
       {
-        this.orders = orders;
+        this.pendingOrders = pendingOrders;
+      }
+    }),
+    (err)=>{
+      console.log(err);
+    }
+
+    //user not pending orders
+    //debugger;
+    this.subscriber3 = this.myService.getNotPendingOrders()
+    .subscribe((notPendingOrders)=>{
+      console.log("notPendingOrders");
+      if(notPendingOrders)
+      {
+        this.notPendingOrders = notPendingOrders;
       }
     }),
     (err)=>{

@@ -12,14 +12,14 @@ export class UserService {
   //get user info
   getUserInfo()
   {
-    let response = this.myClient.get(`${this.apiUrl}/GetUserInfo`,{observe:'body'});
+    let response = this.myClient.get(`${this.apiUrl}/auth/GetUserInfo`,{observe:'body'});
     return response;
   }
 
   //update user info
   updateUserInfo()
   {
-    let response = this.myClient.put<void>(`${this.apiUrl}/UpdateUserInfo`,{observe:'body'},{ 
+    let response = this.myClient.put<void>(`${this.apiUrl}/auth/UpdateUserInfo`,{observe:'body'},{ 
       headers: new HttpHeaders({
         'Content-Type':'application/json'
     })

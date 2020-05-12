@@ -21,8 +21,8 @@
         </div>
     </div>
       <div class="row ordersContainer">
-        <app-order-item *ngFor="let order of orders" [orderInfo]='order'></app-order-item>
-        
+        <app-order-item *ngFor="let order of pendingOrders" [orderInfo]='order'></app-order-item>
+        <app-order-item *ngFor="let order of notPendingOrders" [orderInfo]='order'></app-order-item>
        </div>
     </div>
   </section>
