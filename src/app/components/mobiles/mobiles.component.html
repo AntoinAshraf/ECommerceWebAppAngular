@@ -1,0 +1,18 @@
+<section class="section-margin calc-60px">
+    <div class="container">
+      <div class="filter-bar d-flex flex-wrap align-items-center">
+        <div>
+          <div class="input-group filter-bar-search">
+            <input [(ngModel)]="name" type="text" placeholder="Search">
+            <div class="input-group-append">
+              <button type="button"><i class="ti-search" [routerLink]="['/mobile',name]" ></i></button>
+            </div>
+          </div>
+        </div>
+    </div>
+      <div class="row productContainer">
+        <app-product-item *ngFor="let product of products" [productInfo]='product'></app-product-item>
+        
+       </div>
+    </div>
+  </section>
