@@ -20,7 +20,7 @@ export class TokenInterceptorService implements HttpInterceptor {
 // intercept(req,next){
     let authService = req;
     console.log(UserLoginData.getUserSetting());
-    // console.log(authService.getToken());
+    //console.log(authService.getToken());
     let tokenizedRequest = req.clone({
       setHeaders: {
         Authorization: `Bearer ${UserLoginData.getUserSetting()}`

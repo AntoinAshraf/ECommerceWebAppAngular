@@ -11,6 +11,8 @@ import { CartItemService } from '../../core/services/cart-item.service';
 export class ProductCartItemComponent implements OnInit {
 
   constructor( private router: Router, private cartItems:CartItemService ) { }
+  subscriper
+  productItems
 
   onCartClick(){
     if( UserLoginData.getUserSetting() ){
