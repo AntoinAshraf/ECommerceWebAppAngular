@@ -15,10 +15,14 @@ export class ProductCartItemComponent implements OnInit {
   onCartClick(){
     if( UserLoginData.getUserSetting() ){
 
-      console.log( this.cartItems.GetShoppingCartItems(UserLoginData.getUserSetting()) );
-
+       this.cartItems.GetShoppingCartItems(UserLoginData.getUserSetting())
+        .subscribe( (prods) => {
+          if(prods){
+            console.log(prods);
+          }
+        }) 
     }else{
-      this.router.navigate(['/home']);
+      this.router.navigate(['/login']);
     }
   }
 

@@ -13,13 +13,7 @@ export class CartItemService {
   private cartItemURL = "http://localhost:51050/api/shoppingCart";
 
   GetShoppingCartItems(userToken){
-    return this.httpClient.get<any>(
-      this.cartItemURL, {
-        headers : {
-          "Authorization": 'Bearer ' + userToken 
-        }
-      } 
-    );
+    return this.httpClient.get(this.cartItemURL);
   }
 
   AddToShoppingCart(userToken, prodID){

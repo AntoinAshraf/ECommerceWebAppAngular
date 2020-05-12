@@ -18,4 +18,8 @@ export class RegisterLoginService {
   loginUser(user){
     return this.httpClient.post<any>(this._loginUrl, user);
   }
+  
+  getToken() {
+    return localStorage.getItem('token');
+  }
 }

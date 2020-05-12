@@ -3,8 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+// Components
 import { ProductCartItemComponent } from './components/product-cart-item/product-cart-item.component';
 import { ProductsContainerComponent } from './components/products-container/products-container.component';
 import { ProductsService } from './core/services/product.service';
@@ -19,6 +21,21 @@ import { SubmitCartToOrderComponent } from './components/submit-cart-to-order/su
 import { SubmitOrderItemTableComponent } from './components/submit-order-item-table/submit-order-item-table.component';
 import { AboutComponent } from './components/about/about.component';
 
+// Token service
+import {TokenInterceptorService} from './core/services/token-interceptor.service'
+
+// import {JwtModule, JWT_OPTIONS} from '@auth0/angular-jwt';
+// import {UserLoginData} from './core/models/userAuthKey';
+
+
+// // called on every request to retrieve the token
+// export function jwtOptionsFactory() {
+//   console.log("inside JWT");
+//   return {
+//     tokenGetter: () => UserLoginData.getUserSetting(), //tokenService.getToken(),
+//     whitelistedDomains: ['localhost:51050']
+//   };
+// }
 
 @NgModule({
   declarations: [
@@ -40,12 +57,26 @@ import { AboutComponent } from './components/about/about.component';
     AppRoutingModule,
     FontAwesomeModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+
+    // JwtModule.forRoot({
+    //   jwtOptionsProvider: {
+    //     provide: JWT_OPTIONS,
+    //     useFactory: jwtOptionsFactory,
+    //     deps: [UserLoginData]
+    //   }
+    // })
+
   ],
   providers: [
     CategoriesService,
-    ProductsService
-    
+    ProductsService,
+    // UserLoginData
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
