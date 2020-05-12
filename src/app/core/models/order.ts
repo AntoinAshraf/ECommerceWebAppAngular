@@ -1,7 +1,7 @@
 import {ApplicationUser} from './ApplicationUser';
 
 export class Order{
-    orderId:number;
+    orderId:string;
     firstName:string;
     lastName:string;
     addressLine1:string;
