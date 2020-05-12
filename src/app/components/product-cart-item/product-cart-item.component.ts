@@ -15,7 +15,20 @@ export class ProductCartItemComponent implements OnInit {
   onCartClick(){
     if( UserLoginData.getUserSetting() ){
 
-      console.log( this.cartItems.GetShoppingCartItems(UserLoginData.getUserSetting()) );
+      console.log(this.prod.productId);
+      this.cartItems.AddToShoppingCart(UserLoginData.getUserSetting(), this.prod.productId)
+        .subscribe( (prodsCartItems) => {
+          if(prodsCartItems){
+            console.log("Done");
+          }
+        });
+      
+      this.cartItems.GetShoppingCartItems(UserLoginData.getUserSetting())
+        .subscribe( (prodsCartItems) => {
+          if(prodsCartItems){
+            console.log(prodsCartItems);
+          }
+        });
 
     }else{
       this.router.navigate(['/home']);

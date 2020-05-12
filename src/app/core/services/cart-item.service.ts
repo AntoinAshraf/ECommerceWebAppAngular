@@ -23,10 +23,20 @@ export class CartItemService {
   }
 
   AddToShoppingCart(userToken, prodID){
-    return this.httpClient.post<any>(`${this.cartItemURL}/${prodID}`, userToken);
+    return this.httpClient.post<any>(
+      `${this.cartItemURL}/${prodID}`, {
+        headers : {
+          "Authorization": 'Bearer ' + userToken 
+        }
+      });
   }
 
   RemoveFromShoppingCart(userToken, prodID){
-    return this.httpClient.delete<any>(`${this.cartItemURL}/${prodID}`, userToken);
+    return this.httpClient.delete<any>(
+      `${this.cartItemURL}/${prodID}`, {
+        headers : {
+          "Authorization": 'Bearer ' + userToken 
+        }
+      });
   }
 }
