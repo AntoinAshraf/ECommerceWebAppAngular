@@ -31,13 +31,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr app-cart-table-row *ngFor="let item of [1,2,3]">
+                        <tr app-cart-table-row (totalPriceOutputReduce)="totalPriceReduceparentMethod($event)"  (totalPriceOutput) = "totalPriceParentMethod($event)"
+                         *ngFor="let item of prodsCartItemsfromReq"  [prodinCart]="item">
                             
                         </tr>
                         
-                        <tr class="bottom_button">
+                        <!-- <tr class="bottom_button">
                             <td>
-                                <a class="button" href="#">Update Cart</a>
+                                
                             </td>
                             <td>
 
@@ -48,7 +49,7 @@
                             <td>
                                 
                             </td>
-                        </tr>
+                        </tr> -->
                         <tr>
                             <td>
 
@@ -57,15 +58,24 @@
 
                             </td>
                             <td>
-                                <h5>Subtotal</h5>
+                                <h5>Total</h5>
                             </td>
                             <td>
-                                <h5>$2160.00</h5>
+                                <h5 >${{total_Price}}</h5>
                             </td>
                         </tr>
                         
                         <tr class="out_button_area">
                             <td class="d-none-l">
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
 
                             </td>
                             <td>

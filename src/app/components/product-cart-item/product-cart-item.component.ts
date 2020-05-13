@@ -25,12 +25,12 @@ export class ProductCartItemComponent implements OnInit {
           }
         })
       
-      this.cartItems.GetShoppingCartItems(UserLoginData.getUserSetting())
-        .subscribe( (prodsCartItems) => {
-          if(prodsCartItems){
-            console.log(prodsCartItems);
-          }
-        });
+      // this.cartItems.GetShoppingCartItems(UserLoginData.getUserSetting())
+      //   .subscribe( (prodsCartItems) => {
+      //     if(prodsCartItems){
+      //       console.log(prodsCartItems);
+      //     }
+      //   });
     }else{
       this.router.navigate(['/login']);
     }

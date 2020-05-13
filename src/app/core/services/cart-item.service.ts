@@ -14,7 +14,7 @@ export class CartItemService {
   private cartItemURL = "http://localhost:51050";
 
   GetShoppingCartItems(userToken){
-    return this.httpClient.get(this.cartItemURL);
+    return this.httpClient.get(`${this.cartItemURL}/api/shoppingCart`);
   }
 
   AddToShoppingCart(userToken, prodID){
