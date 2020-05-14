@@ -16,9 +16,11 @@ const routes: Routes = [
   {path:'labtops',component:LabtopsComponent},
   {path:'mobiles/:id',component:ProductDetailsComponent},
   {path:'labtops/:id',component:ProductDetailsComponent},
-  {path:'mobile/:name',component:SearchProductComponent},
-  {path:'labtop/:name',component:SearchProductComponent}
-
+  {path:'products/:id',component:ProductDetailsComponent},
+  {path:'mobile/:name/:id',component:ProductDetailsComponent},
+  {path:'labtop/:name/:id',component:ProductDetailsComponent},
+  {path:'product/:name/:id',component:ProductDetailsComponent},
+  {path:'product/:name',component:SearchProductComponent},
 ];
 
 @NgModule({
