@@ -44,6 +44,21 @@ export class SubmitCartToOrderComponent implements OnInit {
     this.checkoutServ.CreateOrder(this.orderDetails)
       .subscribe( (returnedOrder) => {
         if(returnedOrder){
+          this.cartItemServ.GetShoppingCartItems(UserLoginData.getUserSetting())
+            .subscribe( (prodsCartItems) => {
+              if(prodsCartItems){
+                this.prodsCartItemsfromReq = prodsCartItems;
+                
+                this.prodsCartItemsfromReq.forEach(prodCart => {
+                  for(var i = 0; i < prodCart.amount; i++){
+                    this.cartItemServ.RemoveFromShoppingCart(UserLoginData.getUserSetting(), prodCart.product.productId)
+                      .subscribe(()=>{});
+                  }
+                });
+              }
+            }
+          );
+
           alert("success");
           this.router.navigate(['/home']);
         }
