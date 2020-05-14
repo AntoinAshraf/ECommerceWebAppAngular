@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { UserLoginData } from './core/models/userAuthKey';
+import {Router} from "@angular/router";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,11 +9,13 @@ import { UserLoginData } from './core/models/userAuthKey';
 })
 export class AppComponent implements OnInit{
   
+  constructor( private router: Router ) { }
+
   userKey:string =  UserLoginData.getUserSetting();
 
   onLogoutClick(){
     UserLoginData.clearUserSetting();
-    location.reload();
+    this.router.navigate(['/home']);
   }
   
   ngOnInit(): void {
