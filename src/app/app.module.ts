@@ -7,6 +7,15 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // Components
+import { MobilesComponent } from './components/mobiles/mobiles.component';
+import { LabtopsComponent } from './components/labtops/labtops.component';
+import { ProductItemComponent } from './components/product-item/product-item.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { SearchProductComponent } from './components/search-product/search-product.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { OrderItemComponent } from './components/order-item/order-item.component';
+import { PendingorderItemComponent } from './components/pendingorder-item/pendingorder-item.component';
 import { ProductCartItemComponent } from './components/product-cart-item/product-cart-item.component';
 import { ProductsContainerComponent } from './components/products-container/products-container.component';
 import { ProductsService } from './core/services/product.service';
@@ -40,6 +49,15 @@ import {TokenInterceptorService} from './core/services/token-interceptor.service
 @NgModule({
   declarations: [
     AppComponent,
+    MobilesComponent,
+    LabtopsComponent,
+    ProductItemComponent,
+    ProductDetailsComponent,
+    SearchProductComponent,
+    ProductsComponent,
+    ProfileComponent,
+    OrderItemComponent,
+    PendingorderItemComponent,
     ProductCartItemComponent,
     ProductsContainerComponent,
     CategoriesComponent,
