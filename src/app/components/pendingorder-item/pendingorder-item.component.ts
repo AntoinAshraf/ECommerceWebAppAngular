@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { OrdersService } from 'src/app/services/orders.service';
+import { OrdersService } from 'src/app/core/services/orders.service';
 
 @Component({
   selector: 'app-pendingorder-item',
