@@ -24,6 +24,7 @@ export class ProductCartItemComponent implements OnInit {
             console.log("Done");
           }
         })
+        alert("Added Successfully");
       
       // this.cartItems.GetShoppingCartItems(UserLoginData.getUserSetting())
       //   .subscribe( (prodsCartItems) => {

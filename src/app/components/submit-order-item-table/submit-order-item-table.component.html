@@ -1,6 +1,6 @@
 
 <a>
-    Fresh Blackberry 
-    [x 02]
-    <span class="last">$720.00</span>
+    {{cartItem.product.shortDescription}}
+    [x {{cartItem.amount}}]
+    <span class="last">{{cartItem.product.price * cartItem.amount}}</span>
 </a>

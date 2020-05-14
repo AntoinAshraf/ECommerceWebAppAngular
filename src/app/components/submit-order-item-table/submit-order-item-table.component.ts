@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
+import { UserLoginData } from 'src/app/core/models/userAuthKey';
 
 @Component({
   selector: '[app-submit-order-item-table]',
@@ -11,5 +12,7 @@ export class SubmitOrderItemTableComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  @Input('prodinCart') cartItem;
 
 }

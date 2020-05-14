@@ -27,8 +27,8 @@ export class RegisterComponent implements OnInit {
   // }
   
   registerUser(){
-     this.userRegisterData.address = "at home";
-     this.userRegisterData.photo = "photo";
+    this.userRegisterData.address = "at home";
+    this.userRegisterData.photo = "photo";
     this.authService.registerUser(this.userRegisterData)
       .subscribe(
         res => { 
