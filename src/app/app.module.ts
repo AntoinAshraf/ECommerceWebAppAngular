@@ -35,6 +35,7 @@ import { UserLoginData } from './core/models/userAuthKey';
 import {TokenInterceptorService} from './core/services/token-interceptor.service';
 import { EditproductComponent } from './components/editproduct/editproduct.component';
 import { AddproductComponent } from './components/addproduct/addproduct.component';
+import { OrdersAdminComponent } from './components/orders-admin/orders-admin.component';
 
 // import {JwtModule, JWT_OPTIONS} from '@auth0/angular-jwt';
 // import {UserLoginData} from './core/models/userAuthKey';
@@ -74,6 +75,7 @@ import { AddproductComponent } from './components/addproduct/addproduct.componen
     AboutComponent,
     EditproductComponent,
     AddproductComponent,
+    OrdersAdminComponent,
   ],
   imports: [
     BrowserModule,

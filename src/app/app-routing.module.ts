@@ -16,6 +16,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { EditproductComponent } from './components/editproduct/editproduct.component';
 import { AddproductComponent } from './components/addproduct/addproduct.component';
+import { OrdersAdminComponent } from './components/orders-admin/orders-admin.component';
 
 const routes: Routes = [
   { path: '', redirectTo:'home',pathMatch:'full' },
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'editprod/:prodid/:categid', component: EditproductComponent },
   { path: 'addProd', component: AddproductComponent },
+  { path: 'ordersall', component: OrdersAdminComponent },
   { path: '**', component: ErrorComponent },
 ];
 
