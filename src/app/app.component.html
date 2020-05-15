@@ -27,6 +27,11 @@
                     </ul>
 
                     <ul  class="nav-shop">
+                        <li *ngIf="isAdmin" class="nav-item">
+                            <button [routerLink]="'/addProd'">
+                                <i class="ti-move"></i>
+                            </button> 
+                        </li>
                         <li *ngIf="userKey" class="nav-item">
                             <button [routerLink]="'/cart'">
                                 <i class="ti-shopping-cart"></i>

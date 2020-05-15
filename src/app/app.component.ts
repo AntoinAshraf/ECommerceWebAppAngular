@@ -12,10 +12,13 @@ export class AppComponent implements OnInit{
   constructor( private router: Router ) { }
 
   userKey:string =  UserLoginData.getUserSetting();
+  isAdmin:boolean = UserLoginData.isAdmin;
 
   onLogoutClick(){
     UserLoginData.clearUserSetting();
+    UserLoginData.isAdmin = false;
     this.router.navigate(['/home']);
+    window.location.reload();
   }
   
   ngOnInit(): void {

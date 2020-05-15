@@ -14,6 +14,8 @@ import { ProductDetailsComponent} from './components/product-details/product-det
 import { SearchProductComponent } from './components/search-product/search-product.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { EditproductComponent } from './components/editproduct/editproduct.component';
+import { AddproductComponent } from './components/addproduct/addproduct.component';
 
 const routes: Routes = [
   { path: '', redirectTo:'home',pathMatch:'full' },
@@ -34,6 +36,8 @@ const routes: Routes = [
   { path: 'checkout', component: SubmitCartToOrderComponent },
   { path: 'about', component: AboutComponent },
   { path: 'cart', component: CartComponent },
+  { path: 'editprod/:prodid/:categid', component: EditproductComponent },
+  { path: 'addProd', component: AddproductComponent },
   { path: '**', component: ErrorComponent },
 ];
 
