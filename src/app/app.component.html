@@ -77,6 +77,26 @@
             </li>
           </ul>
 
+<<<<<<< HEAD
+                    <ul  class="nav-shop">
+                        <li *ngIf="isAdmin" class="nav-item">
+                            <button [routerLink]="'/addProd'">
+                                <i class="ti-move"></i>
+                            </button> 
+                        </li>
+                        <li *ngIf="userKey" class="nav-item">
+                            <button [routerLink]="'/cart'">
+                                <i class="ti-shopping-cart"></i>
+                            </button>
+                        </li>
+                        <li *ngIf="!userKey" class="nav-item"><a class="button button-header" outerLinkActive="active" [routerLink]="'/login'">Buy Now</a></li>
+                        <li *ngIf="userKey" class="nav-item"><a class="button button-header" (click)="onLogoutClick()" >Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+=======
           <ul class="nav-shop">
             <li *ngIf="userKey" class="nav-item">
               <button [routerLink]="'/cart'">
@@ -101,6 +121,7 @@
       </div>
     </nav>
   </div>
+>>>>>>> 94f7c422ea8ae5b08a0aab4b9bc26f29cb4f3b7a
 </header>
 <!--================ End Header Menu Area =================-->
 

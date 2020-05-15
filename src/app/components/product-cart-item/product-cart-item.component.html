@@ -4,7 +4,9 @@
         <img class="card-img" src="../../../assets/img/product/product1.png" alt=""> 
         <!--TODO:Change to actual image-->
         <ul class="card-product__imgOverlay">
+            <li *ngIf="userLoginData.getIsAdmin()" (click)="onRemoveClick()"><button><i class="ti-trash"></i></button></li>
             <li><button><i (click)="onCartClick()" class="ti-shopping-cart"></i></button></li>
+            <li *ngIf="userLoginData.getIsAdmin()" (click)="onEditCartClick()"><button><i class="ti-settings"></i></button></li>
         </ul>
     </div>
     <div class="card-body">

@@ -18,8 +18,8 @@ export class ProductsService {
     return this.myClient.get(`${this.baseURL}/api/searchforproducts/${name}`);
   }
 
-  AddProductForCategory(id, product){
-    return this.myClient.post(`${this.baseURL}/api/categories/${id}/products`,product);
+  AddProductForCategory(categfId, product){
+    return this.myClient.post(`${this.baseURL}/api/categories/${categfId}/products`,product);
   }
 
   //TODO:check to remove categID
@@ -31,4 +31,11 @@ export class ProductsService {
     return this.myClient.get(`${this.baseURL}/api/categories/${categID}/products`);
   }
 
+  deleteProduct(CategID, ProdID){
+    return this.myClient.delete(`${this.baseURL}/api/categories/${CategID}/products/${ProdID}`);
+  }
+
+  UpdateProductForCategory(CategID, ProdID, newProd){
+    return this.myClient.put(`${this.baseURL}/api/categories/${CategID}/products/${ProdID}`, newProd);
+  }
 }

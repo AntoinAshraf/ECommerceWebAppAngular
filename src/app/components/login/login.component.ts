@@ -11,7 +11,7 @@ import { UserLoginData } from '../../core/models/userAuthKey';
 export class LoginComponent implements OnInit {
 
   loginUserData = new ApplicationUser();
-
+  userLoginData = new UserLoginData();
   constructor(private authService : RegisterLoginService, private router: Router) { }
 
 
@@ -29,8 +29,10 @@ export class LoginComponent implements OnInit {
         alert("Sucess");
         console.log(res);
         UserLoginData.setSetting(res.message);
+        console.log(this.loginUserData.email);
         this.router.navigate(['/home']);
         location.reload();
+        this.userLoginData.checkAdmin(this.loginUserData.email);
       },
       err => {
         alert("error");

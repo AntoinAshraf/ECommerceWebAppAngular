@@ -29,9 +29,12 @@ import { CartTableRowComponent } from './components/cart-table-row/cart-table-ro
 import { SubmitCartToOrderComponent } from './components/submit-cart-to-order/submit-cart-to-order.component';
 import { SubmitOrderItemTableComponent } from './components/submit-order-item-table/submit-order-item-table.component';
 import { AboutComponent } from './components/about/about.component';
+import { UserLoginData } from './core/models/userAuthKey';
 
 // Token service
-import {TokenInterceptorService} from './core/services/token-interceptor.service'
+import {TokenInterceptorService} from './core/services/token-interceptor.service';
+import { EditproductComponent } from './components/editproduct/editproduct.component';
+import { AddproductComponent } from './components/addproduct/addproduct.component';
 
 // import {JwtModule, JWT_OPTIONS} from '@auth0/angular-jwt';
 // import {UserLoginData} from './core/models/userAuthKey';
@@ -68,7 +71,9 @@ import {TokenInterceptorService} from './core/services/token-interceptor.service
     CartTableRowComponent,
     SubmitCartToOrderComponent,
     SubmitOrderItemTableComponent,
-    AboutComponent
+    AboutComponent,
+    EditproductComponent,
+    AddproductComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,7 +81,7 @@ import {TokenInterceptorService} from './core/services/token-interceptor.service
     FontAwesomeModule,
     FormsModule,
     HttpClientModule,
-
+    
     // JwtModule.forRoot({
     //   jwtOptionsProvider: {
     //     provide: JWT_OPTIONS,
