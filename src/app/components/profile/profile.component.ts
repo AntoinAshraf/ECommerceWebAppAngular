@@ -21,7 +21,7 @@ export class ProfileComponent implements OnInit {
 
     //user pending orders
     debugger;
-    this.subscriber = this.myService.getPendingOrders()
+    this.subscriber = this.myService.getOrders()
     .subscribe((pendingOrders)=>{
       console.log(pendingOrders);
       if(pendingOrders)
