@@ -8,7 +8,6 @@ import { OrdersService } from 'src/app/core/services/orders.service';
 })
 export class PendingorderItemComponent implements OnInit {
 
-
   constructor(private myService:OrdersService) { }
 
   subscriber;

@@ -37,6 +37,7 @@ import { EditproductComponent } from './components/editproduct/editproduct.compo
 import { AddproductComponent } from './components/addproduct/addproduct.component';
 import { OrdersAdminComponent } from './components/orders-admin/orders-admin.component';
 import { OrdertablerowComponent } from './components/ordertablerow/ordertablerow.component';
+import { NotPendingorderItemComponent } from './components/not-pendingorder-item/not-pendingorder-item.component';
 
 // import {JwtModule, JWT_OPTIONS} from '@auth0/angular-jwt';
 // import {UserLoginData} from './core/models/userAuthKey';
@@ -78,6 +79,7 @@ import { OrdertablerowComponent } from './components/ordertablerow/ordertablerow
     AddproductComponent,
     OrdersAdminComponent,
     OrdertablerowComponent,
+    NotPendingorderItemComponent,
   ],
   imports: [
     BrowserModule,
