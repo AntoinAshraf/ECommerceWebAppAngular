@@ -21,9 +21,9 @@ export class ProfileComponent implements OnInit {
 
     //user pending orders
     debugger;
-    this.subscriber = this.myService.getPendingOrders()
+    this.subscriber = this.myService.getOrders()
     .subscribe((pendingOrders)=>{
-      console.log("pendingOrders");
+      console.log(pendingOrders);
       if(pendingOrders)
       {
         this.pendingOrders = pendingOrders;
@@ -37,7 +37,7 @@ export class ProfileComponent implements OnInit {
     //debugger;
     this.subscriber3 = this.myService.getNotPendingOrders()
     .subscribe((notPendingOrders)=>{
-      console.log("notPendingOrders");
+      console.log(notPendingOrders);
       if(notPendingOrders)
       {
         this.notPendingOrders = notPendingOrders;
@@ -51,7 +51,7 @@ export class ProfileComponent implements OnInit {
     //debugger;
     this.subscriber2=this.myService2.getUserInfo()
     .subscribe((data)=>{
-      console.log(data);
+      console.log("data",data);
       if(data)
       {
         this.data = data;
