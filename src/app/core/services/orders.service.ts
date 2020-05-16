@@ -10,17 +10,13 @@ export class OrdersService {
   constructor(private myClient:HttpClient) { }
 
   //get userOrders
-  getOrders()
-  {
-    let response = this.myClient.get(`${this.apiUrl}/orders/UserOrder`,{observe:'body'});
-    return response;
+  getOrders() {
+    return this.myClient.get(`${this.apiUrl}/orders`);
   }
 
   //get userPendingOrders
-  getPendingOrders()
-  {
-    let response = this.myClient.get(`${this.apiUrl}/orders/UserPendingOrders`,{observe:'body'});
-    return response;
+  getPendingOrders(){
+    return this.myClient.get(`${this.apiUrl}/orders/UserPendingOrders`);
   }
 
   //get userNotPendingOrders
@@ -35,5 +31,9 @@ export class OrdersService {
   {
     let response = this.myClient.delete(`${this.apiUrl}/orders/${id}`);
     return response;
+  }
+
+  updateOrder(orderId ,order){
+    return this.myClient.put(`${this.apiUrl}/orders/${orderId}`, order);
   }
 }

@@ -40,7 +40,7 @@ export class SubmitCartToOrderComponent implements OnInit {
   }
 
   onSubmitOrderClick(){
-    this.orderDetails.OrderStatus = "pending";
+    this.orderDetails.OrderStatus = "Pending";
     this.checkoutServ.CreateOrder(this.orderDetails)
       .subscribe( (returnedOrder) => {
         if(returnedOrder){
