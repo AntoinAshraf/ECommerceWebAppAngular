@@ -32,7 +32,6 @@ export class LoginComponent implements OnInit {
         console.log(this.loginUserData.email);
         this.router.navigate(['/home']);
         location.reload();
-        console.log("Heeeeeeeeer");
         UserLoginData.checkAdmin(this.loginUserData.email);
       },
       err => {
