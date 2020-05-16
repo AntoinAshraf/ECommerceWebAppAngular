@@ -33,8 +33,9 @@ export class LabtopsComponent implements OnInit {
        if(categories)
        {
          this.categories = categories;
+         console.log(this.categories[0].categoryName); 
          this.categories.forEach(element => {
-           if(element.categoryName=="Labs")
+           if(element.categoryName==this.categories[0].categoryName)
            {
             this.categoryID=element.categoryId;
             //debugger;
@@ -47,7 +48,6 @@ export class LabtopsComponent implements OnInit {
             }
           }),
           (err)=>{
-            this.router.navigate(['/login']);
             console.log(err);
             }
            }
@@ -55,8 +55,6 @@ export class LabtopsComponent implements OnInit {
        }
      }),
      (err)=>{
-      this.router.navigate(['/login']);
-      window.location.reload();
        console.log(err);
      }
 

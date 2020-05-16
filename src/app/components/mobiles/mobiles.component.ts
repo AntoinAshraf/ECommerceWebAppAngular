@@ -29,7 +29,7 @@ export class MobilesComponent implements OnInit {
        {
          this.categories = categories;
          this.categories.forEach(element => {
-           if(element.categoryName=="Phones")
+           if(element.categoryName=="Mobile")
            {
             this.categoryID=element.categoryId;
             //debugger;
