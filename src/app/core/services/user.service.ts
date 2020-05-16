@@ -6,7 +6,7 @@ import {HttpClient, HttpHandler, HttpHeaders} from '@angular/common/http';
 })
 export class UserService {
 
-  apiUrl:string = "http://localhost:51050/api"
+  apiUrl:string = "https://ecommerceapi20200516034418.azurewebsites.net/api"
   constructor(private myClient:HttpClient) { }
 
   //get user info

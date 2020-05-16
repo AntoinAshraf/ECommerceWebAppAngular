@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RegisterLoginService {
 
-  private _registerUrl = "http://localhost:51050/api/auth/Register";
-  private _loginUrl = "http://localhost:51050/api/auth/Login";
+  private _registerUrl = "https://ecommerceapi20200516034418.azurewebsites.net/api/auth/Register";
+  private _loginUrl = "https://ecommerceapi20200516034418.azurewebsites.net/api/auth/Login";
   
   constructor( private httpClient:HttpClient ) {  }
 

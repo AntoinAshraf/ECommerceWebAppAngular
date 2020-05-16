@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class OrdersService {
 
-  apiUrl:string = "http://localhost:51050/api"
+  apiUrl:string = "https://ecommerceapi20200516034418.azurewebsites.net/api"
   constructor(private myClient:HttpClient) { }
 
   //get userOrders

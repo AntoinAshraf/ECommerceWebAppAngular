@@ -8,7 +8,7 @@ export class CheckoutService {
 
   constructor( private httpClient:HttpClient ) { }
 
-  private cartItemURL = "http://localhost:51050";
+  private cartItemURL = "https://ecommerceapi20200516034418.azurewebsites.net";
 
   CreateOrder(orderData){
     return this.httpClient.post<any>(`${this.cartItemURL}/api/orders`, orderData);

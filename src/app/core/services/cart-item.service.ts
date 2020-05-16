@@ -11,7 +11,7 @@ export class CartItemService {
 
   constructor( private httpClient:HttpClient ) { }
 
-  private cartItemURL = "http://localhost:51050";
+  private cartItemURL = "https://ecommerceapi20200516034418.azurewebsites.net";
 
   GetShoppingCartItems(userToken){
     return this.httpClient.get(`${this.cartItemURL}/api/shoppingCart`);

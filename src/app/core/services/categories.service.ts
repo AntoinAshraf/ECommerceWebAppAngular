@@ -8,7 +8,7 @@ import { Category } from '../../core/models/category';
 export class CategoriesService {
 
   constructor( private myClient:HttpClient ) {  }
-  baseURL = "http://localhost:51050";
+  baseURL = "https://ecommerceapi20200516034418.azurewebsites.net";
 
   GetAllCategories(){
     return this.myClient.get(`${this.baseURL}/api/categories`);
