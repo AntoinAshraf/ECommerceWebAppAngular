@@ -15,6 +15,13 @@ export class AppComponent implements OnInit{
   userKey:string =  UserLoginData.getUserSetting();
   isAdmin:boolean = UserLoginData.getIsAdmin();
 
+  onClickCheckAuth(){
+    if( !UserLoginData.getUserSetting() ){
+      alert("Not authorized! Please login or register...");
+      this.router.navigate(['/login']);
+    }
+  }
+
   onLogoutClick(){
     UserLoginData.cleanAll();
     //UserLoginData.isAdmin = false;
@@ -27,5 +34,5 @@ export class AppComponent implements OnInit{
     //UserLoginData.clearUserSetting();
     this.userKey = UserLoginData.getUserSetting();
   }
-  title = 'ECommerceWebAppAngular';
+  title = 'Aroma Shop';
 }
