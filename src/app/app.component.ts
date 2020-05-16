@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { UserLoginData } from './core/models/userAuthKey';
 import {Router} from "@angular/router";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,14 +10,14 @@ import {Router} from "@angular/router";
 })
 export class AppComponent implements OnInit{
   
-  constructor( private router: Router ) { }
+  constructor( private router: Router ) {  }
 
   userKey:string =  UserLoginData.getUserSetting();
-  isAdmin:boolean = UserLoginData.isAdmin;
+  isAdmin:boolean = UserLoginData.getIsAdmin();
 
   onLogoutClick(){
-    UserLoginData.clearUserSetting();
-    UserLoginData.isAdmin = false;
+    UserLoginData.cleanAll();
+    //UserLoginData.isAdmin = false;
     this.router.navigate(['/home']);
     window.location.reload();
   }

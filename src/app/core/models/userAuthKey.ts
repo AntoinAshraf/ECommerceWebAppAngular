@@ -1,17 +1,21 @@
 export class UserLoginData{
     private static storageName:string = "userKey";
-    static isAdmin:boolean = true;
+    private static adminstorageName:string = "isAdmin";
+    static isAdmin:boolean = false;
     static _adminEmail = "tonyashraf159@gmail.com";
 
-    checkAdmin(email){
+    static checkAdmin(email){
         if(UserLoginData._adminEmail == email){
+            localStorage.setItem(this.adminstorageName, JSON.stringify("true"));
             UserLoginData.isAdmin = true;
+            return true;
         }
-        return UserLoginData.isAdmin;
+        return false;
     }
 
-    getIsAdmin(){
-        return UserLoginData.isAdmin;
+    static getIsAdmin(){
+        let data = localStorage.getItem(this.adminstorageName);
+        return JSON.parse(data);
     }
 
     static setSetting(data:any){

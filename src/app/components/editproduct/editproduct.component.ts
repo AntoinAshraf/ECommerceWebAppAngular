@@ -18,7 +18,7 @@ export class EditproductComponent implements OnInit {
   productRecieved = new product();
 
   constructor(private prodServ:ProductsService, private router: Router, private myActivatedRoute:ActivatedRoute) { 
-    if(!this.userLoginData.getIsAdmin()){
+    if(!UserLoginData.getIsAdmin()){
       this.router.navigate(['/home']);
     }
     this.categID = this.myActivatedRoute.snapshot.params["categid"];
