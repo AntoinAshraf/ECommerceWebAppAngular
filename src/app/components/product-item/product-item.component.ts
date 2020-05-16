@@ -12,7 +12,7 @@ import { ProductsService } from '../../core/services/product.service';
 export class ProductItemComponent implements OnInit {
 
   constructor( private router: Router, private cartItems:CartItemService, private prodServ:ProductsService ) {
-    this.userLoginData = new UserLoginData();  
+    this.userLoginData = UserLoginData.getIsAdmin();  
   }
 
   ngOnInit(): void {

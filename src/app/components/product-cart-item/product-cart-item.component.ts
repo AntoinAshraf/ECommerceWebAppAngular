@@ -11,15 +11,15 @@ import { ProductsService } from '../../core/services/product.service';
 })
 export class ProductCartItemComponent implements OnInit {
 
-  constructor( private router: Router, private cartItems:CartItemService, private prodServ:ProductsService ) { }
+  constructor( private router: Router, private cartItems:CartItemService, private prodServ:ProductsService ) {
+    this.isAdmin = UserLoginData.getIsAdmin();
+  }
   isAdmin
   subscriper
   productItems
 
 
   onCartClick(){
-
-    this.isAdmin = UserLoginData.getIsAdmin();
 
     if( UserLoginData.getUserSetting() ){
 
